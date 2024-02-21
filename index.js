@@ -40,10 +40,10 @@ app.use(
 console.log(`Application name: ${config.get("name")}`);
 console.log(`Application Server: ${config.get("mail.host")}`);
 
-if (!config.get("jwtPrivateKey")) {
-  console.error("FATAL: token is not defined..");
-  process.exit(1);
-}
+// if (!config.get("jwtPrivateKey")) {
+//   console.error("FATAL: token is not defined..");
+//   process.exit(1);
+// }
 
 //Routes
 app.use("/api/feedback", feedback);
