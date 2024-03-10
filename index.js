@@ -14,7 +14,8 @@ const cors = require("cors");
 
 // Database connection
 mongoose
-  .connect("mongodb://127.0.0.1:27017/feedbackDB")
+  .connect("mongodb+srv://pogooluwa12:2BFtIguWhKoTpZ3J@cluster0.nxsousf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+  // .connect("mongodb://127.0.0.1:27017/feedbackDB")
   .then(() => console.log("Connected to FeedbackDB"))
   .catch((err) => console.error("Error connecting to FeedbackDB", err));
 
@@ -28,17 +29,18 @@ if (app.get("env") === "development") {
   debug("Debugging");
 }
 app.use(
-    cors({
-        origin: "https://feedback-apps-one.vercel.app",
-        // origin: "http://localhost:5173",
-        allowedHeaders: ["Authorization", "Content-Type", "x-auth-token"],
-        methods: ["GET", "POST", "PUT", "PATCH", "DELETE"]
-    })
+  cors({
+    origin: "https://feedback-apps-one.vercel.app",
+    // origin: "http://localhost:5173",
+    allowedHeaders: ["Authorization", "Content-Type", "x-auth-token"],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+  })
 );
 
 // Configurations
 console.log(`Application name: ${config.get("name")}`);
 console.log(`Application Server: ${config.get("mail.host")}`);
+// 2BFtIguWhKoTpZ3J
 
 // if (!config.get("jwtPrivateKey")) {
 //   console.error("FATAL: token is not defined..");
