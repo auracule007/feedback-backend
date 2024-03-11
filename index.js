@@ -14,7 +14,7 @@ const cors = require("cors");
 
 // Database connection
 mongoose
-  .connect("mongodb+srv://pogooluwa13:Pc7PNjENUI9B6lzN@cluster0.uk9q4ic.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+  .connect("mongodb+srv://pogooluwa12:2BFtIguWhKoTpZ3J@cluster0.nxsousf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
   // .connect("mongodb://127.0.0.1:27017/feedbackDB")
   .then(() => console.log("Connected to FeedbackDB"))
   .catch((err) => console.error("Error connecting to FeedbackDB", err));
