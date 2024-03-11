@@ -31,7 +31,7 @@ if (app.get("env") === "development") {
 }
 app.use(
   cors({
-    origin: "https://feedback-app-sandy-nine.vercel.app/",
+    origin: "https://feedback-app-sandy-nine.vercel.app",
     // origin: "http://localhost:3000",
     allowedHeaders: ["Authorization", "Content-Type", "x-auth-token"],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
